@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="proyecto" content="Portafolio 2023">
+    <title>Cambio de contraseña</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+</head>
+
+<body class="is-preload">
+    <!--DESDE AQUI NAVBAR-->
+    <div id="nav-component"></div>
+    <!--HASTA AQUI NAVBAR-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--DESDE AQUI MENÚ LATERAL-->
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a id="nombre-usuario" class="nav-link" href="perfil.html">
+                                <img id="img-usuario"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8HJpZl5SDTDZP455OxKbc71lJTRXW4wygA&usqp=CAU"
+                                    alt="" width="32" height="32" class="rounded-circle me-2">
+                            </a>
+                        </li>
+                        <hr />
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="dashboard.html">
+                                <span data-feather="home" class="align-text-bottom"></span>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="informes.html">
+                                <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                                Informes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="usuarios.html">
+                                <span data-feather="users" class="align-text-bottom"></span>
+                                Usuarios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="alimentacion.html">
+                                <span data-feather="coffee" class="align-text-bottom"></span>
+                                Alimentación
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="asistencia.html">
+                                <span data-feather="calendar" class="align-text-bottom"></span>
+                                Asistencia
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="permisos.html">
+                                <span data-feather="sun" class="align-text-bottom"></span>
+                                Permisos
+                            </a>
+                        </li>
+
+                    </ul>
+                    <hr />
+
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
+                        <span>Favoritos</span>
+                        <span data-feather="star" class="align-text-bottom"></span>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a download="sacApk" class="nav-link" href="\assets\sacApk.apk">
+                                <span data-feather="smartphone" class="align-text-bottom"></span>
+                                Descarga la APP
+                            </a>
+                            </li>
+                                <li class="nav-item">
+                                    <a download="Manual SAC" class="nav-link" href="\assets\sacManual.pdf">
+                                    <span data-feather="file" class="align-text-bottom"></span>
+                                Descarga el manual
+                            </a>
+                            </li>   
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">
+                                <span data-feather="help-circle" class="align-text-bottom"></span>
+                                Preguntas Frecuentes
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+            <!--HASTA AQUI MENÚ LATERAL-->
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!--DESDE AQUI FORMULARIO-->
+                <div class="bd-cheatsheet container-fluid bg-body">
+                    <section id="informe-filtros">
+                        <article class="my-3 border" id="overview">
+                            <div class="bd-heading sticky-xl-top align-self-start mt-5 mt-xl-0 mb-xl-2"></div>
+                            <form id="cambio-contrasena-form" class="my-3">
+                                <label for="contrasena_antigua">Contraseña antigua:</label>
+                                <input type="password" id="contrasena_antigua" name="contrasena_antigua"
+                                    class="form-control" required><br><br>
+
+                                <label for="contrasena_nueva">Contraseña nueva:</label>
+                                <input type="password" id="contrasena_nueva" name="contrasena_nueva"
+                                    class="form-control" required><br><br>
+
+                                <input type="submit" value="Confirmar" class="btn btn-outline-info btn-md">
+                            </form>
+                        </article>
+                    </section>
+                </div>
+                <!--HASTA AQUI FORMS-->
+            </main>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"
+        integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG"
+        crossorigin="anonymous"></script>
+        <script src="assets/js/componentImport.js"></script>
+        <script src="assets/js/cambio_contrasena.js"></script>
+   
